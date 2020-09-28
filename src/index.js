@@ -1,20 +1,29 @@
 import React from 'react';
-import { View, Text, StyleSheet } from 'react-native';
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
+
+import UserList from './views/UserList';
+import UserForm from './views/UserForm';
+
+const Stack = createStackNavigator();
 
 const App = () => {
   return(
-    <View style={styles.container} >
-      
-    </View>
+    <NavigationContainer>
+      <Stack.Navigator initialRouteName="UserList">
+        <Stack.Screen
+          name="UserList"
+          component={UserList}
+        />
+        <Stack.Screen
+          name="UserForm"
+          component={UserForm}
+        />
+      </Stack.Navigator>
+    </NavigationContainer>
   );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    display: "flex",
-    flex: 1,
-    backgroundColor: '#7159c1',
-  },
-});   
+   
 
 export default App; 
