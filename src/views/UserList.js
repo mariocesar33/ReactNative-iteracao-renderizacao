@@ -6,7 +6,7 @@ import users from '../data/users';
 const UserList = () => {
 
   function getUserItem({ item }){
-    return <Text>{item.name}</Text>
+    return <Text>{item.id} - {item.name}</Text>
   }
 
   return(
