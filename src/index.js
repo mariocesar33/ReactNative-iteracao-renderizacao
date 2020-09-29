@@ -23,7 +23,7 @@ const App = () => {
               title: "Lista de Utilizadores",
               headerRight: () => (
                 <Button 
-                onPress={() => navigation.navigate("UserForm")}
+                  onPress={() => navigation.navigate("UserForm")}
                   type="clear"
                   icon={<Icon name="add" size={25} color="white" />}
                 />
